@@ -115,7 +115,7 @@
               <input type="text" id="name" class="form-control" placeholder="Your Name" required>
             </div>
             <div class="form-group">
-              <input type="text" id="phoneno" class="form-control" placeholder="Phone Number" required>
+              <input type="text" id="phone" class="form-control" placeholder="Phone Number" required>
             </div>
             <div class="form-group">
               <input type="text" id="email" class="form-control" placeholder="Your Email">
@@ -357,7 +357,7 @@
       e.preventDefault();
 
       let name = document.getElementById("name").value;
-      let phoneno = document.getElementById("phoneno").value;
+      let phoneno = document.getElementById("phone").value;
       let email = document.getElementById("email").value;
       let arrivaldate = document.getElementById("arrivaldate").value;
       let departuredate = document.getElementById("departuredate").value;
@@ -370,7 +370,7 @@
       // Replace with your WhatsApp number in international format (without + or 0 at start)
       let phone = "917904327381";
 
-      let whatsappMessage = `*New Enquiry*%0A
+      let whatsappMessage = `*New Booking*%0A
     👤 Name: ${name}%0A
     📞 Phone: ${phoneno}%0A
     📧 Email: ${email}%0A
