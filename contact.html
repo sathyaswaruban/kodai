@@ -37,10 +37,10 @@
       <div class="collapse navbar-collapse" id="ftco-nav">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-          <li class="nav-item"><a href="destination.html" class="nav-link">Package</a></li>
+          <li class="nav-item"><a href="packages.html" class="nav-link">Package</a></li>
           <li class="nav-item"><a href="hotel.html" class="nav-link">Hotel</a></li>
           <li class="nav-item"><a href="carRental.html" class="nav-link">Car Rental</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
           <li class="nav-item active"><a href="contact.html" class="nav-link">Contact</a></li>
         </ul>
       </div>
@@ -98,27 +98,61 @@
               <span class="fa fa-globe"></span>
             </div>
             <h3 class="mb-2">Website</h3>
-            <p><a href="#">ayshaholidays.com</a></p>
+            <p id="form1"><a href="#">ayshaholidays.com</a></p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="form1" class="ftco-section contact-section ftco-no-pt">
+  <section class="ftco-section contact-section ftco-no-pt">
     <div class="container">
       <div class="row block-9">
-        <div class="col-md-6 order-md-last d-flex">
-          <form id="whatsappForm" class="bg-light p-5 contact-form">
-            <h3 class="mb-2 bold">Enquiry Form</h3>
+        <div class="col-md-8 order-md-last d-flex">
+          <form id="whatsappForm" class="bg-light p-3 contact-form">
+            <h3 class="mb-2 bold">Booking Form</h3>
             <div class="form-group">
               <input type="text" id="name" class="form-control" placeholder="Your Name" required>
             </div>
             <div class="form-group">
-              <input type="text" id="email" class="form-control" placeholder="Your Email" required>
+              <input type="text" id="phoneno" class="form-control" placeholder="Phone Number" required>
             </div>
             <div class="form-group">
-              <input type="text" id="subject" class="form-control" placeholder="Subject">
+              <input type="text" id="email" class="form-control" placeholder="Your Email">
+            </div>
+            <div class="form-group">
+              <label for="arrivaldate">Arrival Date:</label>
+              <input type="date" id="arrivaldate" class="form-control" placeholder="Arrival Date" required>
+            </div>
+            <div class="form-group">
+              <label for="departuredate">Departure Date:</label>
+              <input type="date" id="departuredate" class="form-control" placeholder="Departure Date" required>
+            </div>
+            <div class="form-group">
+              <!-- Placeholder Option -->
+              <select id="hotel-type" class="form-control">
+                <option value="" disabled selected>Choose Hotel Type</option>
+                <option value="not-required">Hotels Not Required</option>
+                <option value="budget">Budget and Economic Stay</option>
+                <option value="luxury">Luxury and Star Hotels</option>
+                <option value="cottages">Cottages and Resorts</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <!-- Placeholder Option -->
+              <select id="car-type" class="form-control">
+                <option value="" disabled selected>Choose Car/Taxi</option>
+                <option value="not-required">Car Not Required</option>
+                <option value="sedan">Sedan - 4 seater</option>
+                <option value="suv">SUV - 7 seater</option>
+                <option value="van">Traveller - 15 Seater</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <input type="number" id="adultscount" class="form-control" placeholder="Number of Adults">
+            </div>
+            <div class="form-group">
+              <input type="number" id="childcount" class="form-control" placeholder="Number of Children">
             </div>
             <div class="form-group">
               <textarea id="message" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
@@ -129,9 +163,56 @@
           </form>
         </div>
 
-        <div class="col-md-6 d-flex">
-          <div id="map" class="bg-white"></div>
+        <div class="col-md-4 d-flex flex-column">
+          <div class="row w-100">
+            <!-- First Service Card -->
+            <div class="col-md-12 d-flex align-self-stretch ftco-animate mb-4">
+              <a href="carRental.html">
+                <div class="services services-1 color-1 d-block img"
+                  style="background-image: url(images/carrental.jpg);">
+                  <div class="icon d-flex align-items-center justify-content-center"><span
+                      class="flaticon-route"></span></div>
+                  <div class="media-body">
+                    <div class="text">
+                      <h3>Car Rental</h3>
+                      <span>All types of Cars available like sedan, SUV, Traverller Vans</span>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <!-- Second Service Card -->
+            <div class="col-md-12 d-flex align-self-stretch ftco-animate mb-4">
+              <a href="packages.html">
+                <div class="services services-1 color-2 d-block img"
+                  style="background-image: url(images/packages-1.jpg);">
+                  <div class="icon d-flex align-items-center justify-content-center"><span
+                      class="flaticon-paragliding"></span>
+                  </div>
+                  <div class="media-body">
+                    <h3 class="heading  mb-3">Packages</h3>
+                    <p>We Provide Packages with best budget... Click to view Packages</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <!-- Third Service Card -->
+            <div class="col-md-12 d-flex align-self-stretch ftco-animate mb-4">
+              <a href="hotel.html">
+                <div class="services services-1 color-3 d-block img"
+                  style="background-image: url(images/services-3.jpg);">
+                  <div class="icon d-flex align-items-center justify-content-center"><span
+                      class="flaticon-tour-guide"></span></div>
+                  <div class="media-body">
+                    <h3 class="heading mb-3">Hotels and Cottages</h3>
+                    <p>We provide Stays with best budget... Click to view Hotels</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
         </div>
+
       </div>
     </div>
   </section>
@@ -220,7 +301,7 @@
     </div>
   </footer>
 
-  <a href="https://wa.me/917904327381" class="whatsapp-float" target="_blank" title="Chat with us on WhatsApp">
+  <a href="https://wa.me/917904327382" class="whatsapp-float" target="_blank" title="Chat with us on WhatsApp">
     <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="whatsapp-icon">
   </a>
 
@@ -276,8 +357,14 @@
       e.preventDefault();
 
       let name = document.getElementById("name").value;
+      let phoneno = document.getElementById("phoneno").value;
       let email = document.getElementById("email").value;
-      let subject = document.getElementById("subject").value;
+      let arrivaldate = document.getElementById("arrivaldate").value;
+      let departuredate = document.getElementById("departuredate").value;
+      let hotelType = document.getElementById("hotel-type").value;
+      let carType = document.getElementById("car-type").value;
+      let adultscount = document.getElementById("adultscount").value;
+      let childcount = document.getElementById("childcount").value;
       let message = document.getElementById("message").value;
 
       // Replace with your WhatsApp number in international format (without + or 0 at start)
@@ -285,8 +372,14 @@
 
       let whatsappMessage = `*New Enquiry*%0A
     👤 Name: ${name}%0A
+    📞 Phone: ${phoneno}%0A
     📧 Email: ${email}%0A
-    📝 Subject: ${subject}%0A
+    📅 Arrival Date: ${arrivaldate}%0A
+    📅 Departure Date: ${departuredate}%0A
+    🏨 Hotel Type: ${hotelType}%0A
+    🚗 Car Type: ${carType}%0A
+    👨‍👩‍👧‍👦 Adults: ${adultscount}%0A
+    👶 Children: ${childcount}%0A
     💬 Message: ${message}`;
 
       let url = `https://wa.me/${phone}?text=${whatsappMessage}`;
